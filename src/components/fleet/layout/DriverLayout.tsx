@@ -23,7 +23,7 @@ export default function DriverLayout() {
     const refresh = localStorage.getItem('refresh_token');
     if (refresh) { try { await authApi.logout(refresh); } catch {} }
     dispatch(clearFleetCredentials());
-    navigate('/fleet/login');
+    navigate('/login');
   };
 
   return (
