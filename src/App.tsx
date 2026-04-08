@@ -6,6 +6,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to="/login" replace />} />
       {fleetRoutes}
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }

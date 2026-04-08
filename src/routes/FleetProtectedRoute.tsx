@@ -14,7 +14,7 @@ export default function FleetProtectedRoute({ allowedRoles }: Props) {
   const isAuthenticated = useSelector(selectFleetIsAuthenticated);
   const role = useSelector(selectFleetRole);
 
-  if (!isAuthenticated) return <Navigate to="/fleet/login" replace />;
+  if (!isAuthenticated) return <Navigate to="/login" replace />;
   if (role && !allowedRoles.includes(role)) {
     // Redirect to appropriate dashboard
     if (role === 'admin') return <Navigate to="/admin/dashboard" replace />;
